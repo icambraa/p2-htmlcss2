@@ -2,9 +2,12 @@
   font-weight: normal;
 
   &__contenedor {
+    container-type: inline-size;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
   }
 
   &__logo-img {
@@ -21,14 +24,7 @@
     display: flex;
     margin: 0;
     padding: 0;
-  }
-
-  &__lista-item {
-    margin-right: 1rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    gap: 1rem;
   }
 
   &__enlace {
@@ -38,6 +34,20 @@
 
     &:hover {
       color: lighten($color-accent-100, 10%);
+    }
+  }
+
+  @container (width < 560px) {
+    &__contenedor {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+  }
+  @container (width < 420px) {
+    &__lista {
+      flex-direction: column;
+      gap: 0.5rem;
     }
   }
 }

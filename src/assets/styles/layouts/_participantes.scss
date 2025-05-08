@@ -4,11 +4,20 @@
     font-weight: 700;
   }
 
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
   &__tarjeta {
     background-color: $color-bg-100;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     border-radius: 0.5rem;
     transition: transform 0.2s ease;
+    width: 18rem;
+    container-type: inline-size;
 
     &:hover {
       transform: translateY(-5px);
@@ -28,8 +37,22 @@
   &__nombre {
     font-weight: 600;
   }
-
   &__descripcion {
     font-size: 0.95rem;
+  }
+
+  @container (width > 300px) {
+    &__nombre {
+      font-size: 1.1rem;
+    }
+    &__descripcion {
+      font-size: 1.05rem;
+    }
+  }
+
+  @container (width < 240px) {
+    &__descripcion {
+      display: none;
+    }
   }
 }

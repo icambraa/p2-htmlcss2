@@ -6,6 +6,7 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     max-width: 600px;
     margin: 0 auto;
+    container-type: inline-size;
   }
 
   &__form-label {
@@ -41,6 +42,26 @@
 
     &:hover {
       background-color: lighten($primary, 8%);
+    }
+  }
+
+  @container (width > 480px) {
+    &__form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    &__campo:nth-child(3) {
+      grid-column: 1 / -1;
+    }
+    &__btn {
+      justify-self: start;
+    }
+  }
+
+  @container (width < 320px) {
+    &__btn {
+      width: 100%;
     }
   }
 }
