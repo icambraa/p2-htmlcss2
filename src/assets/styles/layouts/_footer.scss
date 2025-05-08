@@ -1,0 +1,13 @@
+footer {
+  img {
+    max-height: 40px;
+  }
+
+  .nav-link {
+    transition: color 0.2s;
+
+    &:hover {
+      color: lighten($color-accent-100, 10%);
+    }
+  }
+}
