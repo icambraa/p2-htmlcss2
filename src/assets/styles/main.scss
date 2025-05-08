@@ -17,7 +17,7 @@
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
-@import "bootstrap/scss/bootstrap.scss";
+
 @import "../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
 /**
@@ -25,13 +25,25 @@
  * It's a best practice to use a different partial for each page
  */
 
-@import "layouts/reset";
-@import "layouts/portada";
-@import "layouts/participantes";
-@import "layouts/articulo";
-@import "layouts/libre";
-@import "layouts/footer";
-@import "layouts/header";
+@layer reset {
+  @import "layouts/reset";
+}
+
+@layer bootstrap {
+  @import "bootstrap/scss/bootstrap.scss";
+}
+
+@layer base {
+  @import "layouts/header";
+  @import "layouts/footer";
+}
+
+@layer layout {
+  @import "layouts/portada";
+  @import "layouts/participantes";
+  @import "layouts/articulo";
+  @import "layouts/libre";
+}
 
 /**
  * Do NOT include anything else in this file!

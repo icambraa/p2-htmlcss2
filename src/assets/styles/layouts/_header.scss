@@ -1,10 +1,40 @@
-header {
-  img {
+.encabezado {
+  font-weight: normal;
+
+  &__contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-img {
     max-height: 40px;
   }
 
-  .nav-link {
+  &__navegacion {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__lista {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__lista-item {
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__enlace {
     transition: color 0.2s;
+    font-weight: normal;
+    text-decoration: none;
 
     &:hover {
       color: lighten($color-accent-100, 10%);

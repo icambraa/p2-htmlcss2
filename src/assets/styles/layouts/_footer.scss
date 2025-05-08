@@ -1,13 +1,64 @@
-footer {
-  img {
+.pie-de-pagina {
+  font-weight: normal;
+
+  &__logo-img {
     max-height: 40px;
   }
 
-  .nav-link {
+  &__navegacion-enlace {
     transition: color 0.2s;
+    font-weight: normal;
 
     &:hover {
       color: lighten($color-accent-100, 10%);
+    }
+  }
+
+  &__superior {
+    background-color: $color-primary-100;
+
+    &__texto {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: normal;
+    }
+  }
+
+  &__separador {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &__inferior {
+    .pie-de-pagina__logo {
+      margin-bottom: 1rem;
+    }
+
+    .pie-de-pagina__navegacion {
+      margin-bottom: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pie-de-pagina__navegacion-enlace {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: lighten($color-accent-100, 10%);
+      }
+    }
+
+    .pie-de-pagina__redes-sociales {
+      gap: 1rem;
+
+      .pie-de-pagina__red-social {
+        font-size: 1.5rem;
+
+        &:hover {
+          color: lighten($color-accent-100, 20%);
+        }
+      }
     }
   }
 }

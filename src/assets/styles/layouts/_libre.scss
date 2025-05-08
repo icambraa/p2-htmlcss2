@@ -1,0 +1,43 @@
+.libre {
+  form {
+    background-color: #fff; // blanco puro
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .form-label {
+    font-weight: 600;
+    color: $color-text-100;
+  }
+
+  .form-control {
+    background-color: #fff;
+    border: 1px solid $color-accent-200;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 0.75rem;
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 0.25rem rgba(6, 68, 32, 0.2);
+    }
+  }
+
+  button[type="submit"] {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    background-color: $primary;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: lighten($primary, 8%);
+    }
+  }
+}
