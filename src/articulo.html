@@ -6,33 +6,33 @@
     <title>Artículo – Jornadas de Economía Circular</title>
     <link rel="stylesheet" href="./assets/styles/main.scss" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <include src="./views/header.html"></include>
 
-    <main class="articulo py-5">
-      <section class="container contenido">
-        <article>
-          <header class="mb-5">
-            <h1 class="text-primary">
+    <main class="articulo">
+      <section class="articulo__contenedor container py-5">
+        <article class="articulo__contenido">
+          <header class="articulo__cabecera mb-5">
+            <h1 class="articulo__titulo text-primary">
               La economía circular como motor del cambio local
             </h1>
-            <p class="autor text-secondary">
+            <p class="articulo__autor text-secondary">
               Por Marta Ribera – Coordinadora del evento
             </p>
           </header>
 
-          <div class="intro-img mb-4 d-md-flex gap-4 align-items-start">
+          <div class="articulo__intro mb-4 d-md-flex gap-4 align-items-start">
             <img
               src="assets/images/articulo1.png"
               alt="Ponente hablando sobre economía circular"
-              class="img-fluid rounded mb-3 mb-md-0"
+              class="articulo__imagen img-fluid rounded mb-3 mb-md-0"
               style="max-width: 45%"
             />
-            <p>
+            <p class="articulo__texto">
               La economía circular propone un profundo cambio de paradigma
               respecto al sistema lineal tradicional. Ya no se trata solo de
               reciclar al final de la cadena, sino de repensar el diseño de
@@ -45,8 +45,10 @@
             </p>
           </div>
 
-          <h2 class="text-primary mt-4">Ponencias clave y expertos</h2>
-          <p>
+          <h2 class="articulo__subtitulo text-primary mt-4">
+            Ponencias clave y expertos
+          </h2>
+          <p class="articulo__texto">
             Durante las jornadas contaremos con una nutrida representación de
             voces del mundo académico, institucional y empresarial.
             Investigadores, técnicos municipales, emprendedores y representantes
@@ -58,18 +60,20 @@
             educativas.
           </p>
 
-          <blockquote class="blockquote destacada">
-            <p>
+          <blockquote class="articulo__cita blockquote destacada">
+            <p class="articulo__cita-texto">
               “No se trata solo de reciclar más, sino de repensar desde el
               diseño hasta el consumo.”
             </p>
-            <footer class="blockquote-footer">
+            <footer class="articulo__cita-autor blockquote-footer">
               Ana Soler, investigadora en sostenibilidad
             </footer>
           </blockquote>
 
-          <h2 class="text-primary mt-5">Actividades y talleres</h2>
-          <p>
+          <h2 class="articulo__subtitulo text-primary mt-5">
+            Actividades y talleres
+          </h2>
+          <p class="articulo__texto">
             Además de las ponencias, se han organizado múltiples actividades
             prácticas dirigidas a todos los públicos. Los asistentes podrán
             participar en talleres de compostaje doméstico, aprender técnicas de
@@ -80,25 +84,29 @@
             y empoderar a los ciudadanos como agentes activos del cambio.
           </p>
 
-          <ul class="list-check">
-            <li>Taller de reciclaje creativo</li>
-            <li>Mesa redonda sobre gestión municipal</li>
-            <li>Actividades escolares y educativas</li>
+          <ul class="articulo__lista list-check">
+            <li class="articulo__lista-item">Taller de reciclaje creativo</li>
+            <li class="articulo__lista-item">
+              Mesa redonda sobre gestión municipal
+            </li>
+            <li class="articulo__lista-item">
+              Actividades escolares y educativas
+            </li>
           </ul>
 
-          <figure class="my-4">
+          <figure class="articulo__figura my-4">
             <img
               src="assets/images/articulo2.png"
               alt="Taller práctico"
-              class="img-fluid rounded"
+              class="articulo__figura-imagen img-fluid rounded"
             />
-            <figcaption class="text-secondary mt-2">
+            <figcaption class="articulo__figura-texto text-secondary mt-2">
               Taller práctico de reciclaje durante las jornadas.
             </figcaption>
           </figure>
 
-          <h2 class="text-primary">Reflexión final</h2>
-          <p>
+          <h2 class="articulo__subtitulo text-primary">Reflexión final</h2>
+          <p class="articulo__texto">
             Este evento no pretende ser un fin en sí mismo, sino el punto de
             partida de una red de colaboración entre vecinos, entidades,
             instituciones y empresas. Porque el cambio hacia una economía más

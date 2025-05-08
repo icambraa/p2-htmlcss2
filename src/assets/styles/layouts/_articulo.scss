@@ -1,97 +1,102 @@
 .articulo {
-  .contenido {
-    article {
-      max-width: 900px;
-      margin: 0 auto;
+  &__contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  &__subtitulo {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    color: $color-primary-100;
+  }
+
+  &__autor {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  &__texto {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: $color-text-100;
+    margin-bottom: 1.2rem;
+    font-weight: normal;
+  }
+
+  &__intro {
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__imagen {
+    flex-shrink: 0;
+    height: 100%;
+  }
+
+  &__cita {
+    padding: 1rem 1.5rem;
+    background-color: $color-bg-200;
+    border-left: 5px solid $primary;
+    font-style: italic;
+    margin: 2rem 0;
+
+    &-texto {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
+    &-autor {
+      font-size: 0.9rem;
+      color: $color-text-200;
     }
+  }
 
-    h2 {
-      font-size: 1.6rem;
-      margin-top: 2rem;
-      color: $color-primary-100;
-    }
+  &__lista {
+    background-color: $color-bg-200;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    list-style: none;
 
-    .autor {
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.05rem;
-      line-height: 1.7;
+    &-item {
+      position: relative;
+      padding-left: 1.8rem;
+      margin-bottom: 0.75rem;
       color: $color-text-100;
-      margin-bottom: 1.2rem;
-      font-weight: normal;
-    }
+      font-weight: 500;
 
-    .intro-img {
-      flex-direction: column;
-
-      @media (min-width: 768px) {
-        flex-direction: row;
+      &::before {
+        content: "✔";
+        color: $primary;
+        position: absolute;
+        left: 0;
       }
     }
+  }
 
-    .blockquote {
-      padding: 1rem 1.5rem;
-      background-color: $color-bg-200;
-      border-left: 5px solid $primary;
-      font-style: italic;
-      margin: 2rem 0;
+  &__figura {
+    text-align: center;
 
-      p {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-      }
-
-      footer {
-        font-size: 0.9rem;
-        color: $color-text-200;
-      }
+    &-texto {
+      font-size: 0.9rem;
+      color: $color-text-200;
     }
+  }
 
-    .list-check {
-      background-color: $color-bg-200;
-      padding: 1.5rem;
-      border-radius: 0.5rem;
-      list-style: none;
+  // márgenes entre elementos
+  :where(h1, h2, p, li):not(:last-child) {
+    margin-bottom: 1rem;
+  }
 
-      li {
-        position: relative;
-        padding-left: 1.8rem;
-        margin-bottom: 0.75rem;
-        color: $color-text-100;
-        font-weight: 500;
-
-        &::before {
-          content: "✔";
-          color: $primary;
-          position: absolute;
-          left: 0;
-        }
-      }
-    }
-
-    figure {
-      text-align: center;
-
-      figcaption {
-        font-size: 0.9rem;
-        color: $color-text-200;
-      }
-    }
-
-    ul:has(li:hover) {
-      background-color: lighten($color-bg-300, 5%);
-    }
-
-    :where(h1, h2, p, li):not(:last-child) {
-      margin-bottom: 1rem;
-    }
+  // efecto hover para listas si algún li se destaca
+  ul:has(li:hover) {
+    background-color: lighten($color-bg-300, 5%);
   }
 }

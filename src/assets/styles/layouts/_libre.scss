@@ -1,6 +1,6 @@
 .libre {
-  form {
-    background-color: #fff; // blanco puro
+  &__form {
+    background-color: #fff;
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
@@ -8,17 +8,20 @@
     margin: 0 auto;
   }
 
-  .form-label {
+  &__form-label {
     font-weight: 600;
     color: $color-text-100;
+    display: block;
+    margin-bottom: 0.5rem;
   }
 
-  .form-control {
+  &__form-control {
     background-color: #fff;
     border: 1px solid $color-accent-200;
     border-radius: 0.5rem;
     font-size: 1rem;
     padding: 0.75rem;
+    width: 100%;
 
     &:focus {
       border-color: $primary;
@@ -26,7 +29,7 @@
     }
   }
 
-  button[type="submit"] {
+  &__btn {
     padding: 0.6rem 1.5rem;
     font-size: 1rem;
     font-weight: 600;

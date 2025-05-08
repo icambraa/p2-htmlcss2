@@ -6,107 +6,119 @@
   align-items: center;
   padding: 2rem;
   color: white;
-}
 
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "titulo titulo"
-    "lema lema"
-    "fecha ."
-    "fecha boton";
-  gap: 1.5rem;
-  max-width: 700px;
-  padding: 2rem;
-  border-radius: 1rem;
-}
+  &__hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "titulo titulo"
+      "lema lema"
+      "fecha ."
+      "fecha boton";
+    gap: 1.5rem;
+    max-width: 700px;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
 
-.titulo {
-  grid-area: titulo;
-  font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 700;
-}
+  &__titulo {
+    grid-area: titulo;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 700;
 
-.fecha {
-  grid-area: fecha;
-  padding: 1.2rem 1.5rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-left: 5px solid #ff8c42;
-  border-radius: 0.5rem;
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(4px);
-  transition: all 0.3s ease;
-}
+    &--naranja {
+      color: #f8843c;
+    }
+  }
 
-.fecha-label {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #ffb366;
-  margin-bottom: 0.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+  &__lema {
+    grid-area: lema;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
 
-.portada p {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
+  &__fecha {
+    grid-area: fecha;
+    padding: 1.2rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 5px solid #ff8c42;
+    border-radius: 0.5rem;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+  }
 
-.lema {
-  grid-area: lema;
-  font-size: 1.4rem;
-  font-weight: 500;
-}
+  &__fecha-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffb366;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
 
-.btn {
-  grid-area: boton;
-  justify-self: end;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-}
+  &__fecha-texto {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+  }
 
-@media (max-width: 480px) {
-  .portada {
+  &__ver-maps {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #ffb366;
+    text-decoration: underline;
+
+    &:hover {
+      color: #ffd9b3;
+    }
+  }
+
+  &__btn {
+    grid-area: boton;
+    justify-self: end;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+  }
+
+  @media (max-width: 480px) {
     background: url("../images/portada-small.png") center/cover no-repeat;
     grid-template-columns: 1fr;
     padding: 1rem;
-  }
 
-  .hero {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "titulo"
-      "lema"
-      "fecha"
-      "fecha"
-      "boton";
-    gap: 1rem;
-    max-width: 100%;
-    padding: 1rem;
-  }
+    &__hero {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "titulo"
+        "lema"
+        "fecha"
+        "fecha"
+        "boton";
+      gap: 1rem;
+      max-width: 100%;
+      padding: 1rem;
+    }
 
-  .titulo {
-    font-size: 2rem;
-  }
+    &__titulo {
+      font-size: 2rem;
+    }
 
-  .fecha {
-    grid-area: fecha;
-    padding: 1rem;
-  }
+    &__fecha {
+      padding: 1rem;
+    }
 
-  .lema {
-    font-size: 1.2rem;
-  }
+    &__lema {
+      font-size: 1.2rem;
+    }
 
-  .btn {
-    padding: 0.75rem 1rem;
-    font-size: 0.9rem;
+    &__btn {
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+    }
   }
 }
-

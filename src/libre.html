@@ -6,7 +6,7 @@
     <title>Página de contacto – Jornadas de Economía Circular</title>
     <link rel="stylesheet" href="./assets/styles/main.scss" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -14,46 +14,55 @@
     <include src="./views/header.html"></include>
 
     <main class="libre">
-      <section class="container py-5">
-        <h2 class="mb-4 text-center text-primary">Contacto</h2>
+      <section class="libre__contenedor container py-5">
+        <h2 class="libre__titulo mb-4 text-center text-primary">Contacto</h2>
 
-        <form name="contact" method="POST" data-netlify="true">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          class="libre__form"
+        >
           <input type="hidden" name="form-name" value="contact" />
 
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
+          <div class="libre__campo mb-3">
+            <label for="nombre" class="libre__form-label">Nombre</label>
             <input
               type="text"
               id="nombre"
               name="nombre"
-              class="form-control"
+              class="libre__form-control"
               required
             />
           </div>
 
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo electrónico</label>
+          <div class="libre__campo mb-3">
+            <label for="email" class="libre__form-label"
+              >Correo electrónico</label
+            >
             <input
               type="email"
               id="email"
               name="email"
-              class="form-control"
+              class="libre__form-control"
               required
             />
           </div>
 
-          <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
+          <div class="libre__campo mb-3">
+            <label for="mensaje" class="libre__form-label">Mensaje</label>
             <textarea
               id="mensaje"
               name="mensaje"
               rows="5"
-              class="form-control"
+              class="libre__form-control"
               required
             ></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="libre__btn libre__btn-primary">
+            Enviar
+          </button>
         </form>
       </section>
     </main>

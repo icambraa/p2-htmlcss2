@@ -6,7 +6,7 @@
     <title>Inicio – Jornadas de Economía Circular</title>
     <link rel="stylesheet" href="./assets/styles/main.scss" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -14,25 +14,31 @@
     <include src="./views/header.html"></include>
 
     <main class="portada">
-      <div class="hero">
-        <h1 class="titulo">Jornadas de Economía Circular 2025</h1>
-        <div class="fecha">
-          <span class="fecha-label">📍 Fecha y lugar</span>
-          <p>8 al 10 de mayo · Salón multiusos de Ballobar</p>
+      <div class="portada__hero">
+        <h1 class="portada__titulo">
+          Jornadas de
+          <span class="portada__titulo--naranja">Economía Circular</span> 2025
+        </h1>
+
+        <div class="portada__fecha">
+          <span class="portada__fecha-label">📍 Fecha y lugar</span>
+          <p class="portada__fecha-texto">
+            8 al 10 de mayo · Salón multiusos de Ballobar
+          </p>
           <a
             href="https://www.google.com/maps?q=salón+multiusos+ballobar"
             target="_blank"
-            class="ver-maps"
+            class="portada__ver-maps"
             >Ver en Maps</a
           >
         </div>
-        <p class="lema">
+        <p class="portada__lema">
           Transformando residuos en oportunidades, juntos por un futuro
           circular.
         </p>
-        <a href="participantes.html" class="btn btn-primary"
-          >Ver participantes</a
-        >
+        <a href="participantes.html" class="portada__btn btn btn-primary">
+          Ver participantes
+        </a>
       </div>
     </main>
 

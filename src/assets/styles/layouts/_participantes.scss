@@ -1,10 +1,10 @@
 .participantes {
-  h1 {
+  &__titulo {
     font-size: 2.5rem;
     font-weight: 700;
   }
 
-  .card {
+  &__tarjeta {
     background-color: $color-bg-100;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     border-radius: 0.5rem;
@@ -13,23 +13,23 @@
     &:hover {
       transform: translateY(-5px);
     }
-
-    img {
-      object-fit: cover;
-      height: 350px;
-    }
-
-    .card-title {
-      font-weight: 600;
-    }
-
-    .card-text {
-      font-size: 0.95rem;
-    }
   }
 
-  .card-img-top {
+  &__imagen {
     object-fit: cover;
+    height: 350px;
     object-position: center top;
+  }
+
+  &__contenido {
+    padding: 1rem;
+  }
+
+  &__nombre {
+    font-weight: 600;
+  }
+
+  &__descripcion {
+    font-size: 0.95rem;
   }
 }
