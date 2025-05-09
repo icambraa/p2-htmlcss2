@@ -3,15 +3,15 @@
 
   &__contenedor {
     container-type: inline-size;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    padding-inline: adjustmenu(1rem, 1.5);
   }
 
   &__logo-img {
-    max-height: 40px;
+    max-height: adjustmenu(20px, 2);
   }
 
   &__navegacion {
@@ -33,7 +33,7 @@
     text-decoration: none;
 
     &:hover {
-      color: color.adjust($color-accent-100, $lightness: 10%);
+      color: lighten($color-accent-100, 10%);
     }
   }
 

@@ -8,7 +8,8 @@
     "selector-max-id": 0,
     "selector-no-qualifying-type": true,
     "shorthand-property-no-redundant-values": true,
-    "declaration-block-no-duplicate-properties": true
+    "declaration-block-no-duplicate-properties": true,
+    "scss/no-global-function-names": null
   },
   "ignoreFiles": ["dist/**/*", "node_modules/**/*"]
 }

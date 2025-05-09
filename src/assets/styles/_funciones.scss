@@ -1,0 +1,4 @@
+@function adjustmenu($width, $ratio) {
+  $new: $width * $ratio;
+  @return $new;
+}
