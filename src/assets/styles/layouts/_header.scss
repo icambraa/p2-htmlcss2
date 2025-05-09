@@ -33,7 +33,7 @@
     text-decoration: none;
 
     &:hover {
-      color: lighten($color-accent-100, 10%);
+      color: color.adjust($color-accent-100, $lightness: 10%);
     }
   }
 

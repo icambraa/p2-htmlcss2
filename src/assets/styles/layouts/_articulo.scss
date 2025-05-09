@@ -77,7 +77,7 @@
     margin-bottom: 1rem;
   }
   ul:has(li:hover) {
-    background: lighten($color-bg-300, 5%);
+    background: color.adjust($color-bg-300, $lightness: 5%);
   }
 
   @container (width > 640px) {

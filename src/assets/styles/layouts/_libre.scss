@@ -1,10 +1,11 @@
 .libre {
   &__form {
     background-color: #fff;
-    padding: 2rem;
+    padding-block: 5dvh;
+    padding-inline: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-    max-width: 600px;
+    max-width: 60dvw;
     margin: 0 auto;
     container-type: inline-size;
   }
@@ -25,8 +26,8 @@
     width: 100%;
 
     &:focus {
-      border-color: $primary;
-      box-shadow: 0 0 0 0.25rem rgba(6, 68, 32, 0.2);
+      border-color: $color-accent-focus;
+      box-shadow: 0 0 0 2px $color-bg-100, 0 0 0 4px $color-accent-focus;
     }
   }
 
@@ -35,13 +36,13 @@
     font-size: 1rem;
     font-weight: 600;
     border-radius: 0.5rem;
-    background-color: $primary;
+    background-color: $color-accent-focus;
     color: #fff;
     border: none;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: lighten($primary, 8%);
+      background-color: $color-accent-hover;
     }
   }
 

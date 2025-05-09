@@ -42,7 +42,7 @@
     font-weight: normal;
 
     &:hover {
-      color: lighten($color-accent-100, 10%);
+      color: color.adjust($color-accent-100, $lightness: 10%);
     }
   }
 
@@ -54,7 +54,7 @@
       font-size: 1.5rem;
 
       &:hover {
-        color: lighten($color-accent-100, 20%);
+        color: color.adjust($color-accent-100, $lightness: 20%);
       }
     }
   }

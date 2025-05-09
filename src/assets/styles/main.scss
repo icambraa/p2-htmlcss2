@@ -24,13 +24,14 @@
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
+@layer reset, bootstrap, base, layout;
 
 @layer reset {
   @import "layouts/reset";
 }
 
 @layer bootstrap {
-  @import "bootstrap/scss/bootstrap.scss";
+  @import "bootstrap/scss/bootstrap";
 }
 
 @layer base {
