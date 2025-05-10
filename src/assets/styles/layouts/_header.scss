@@ -33,14 +33,13 @@
     padding: 0;
     gap: 1rem;
   }
-
-  &__enlace {
-    transition: color 0.2s;
+  &__lista-item .encabezado__enlace.nav-link {
     font-weight: normal;
+    color: white;
     text-decoration: none;
 
     &:hover {
-      color: lighten($color-accent-100, 10%);
+      color: lighten($color-naranja, 10%);
     }
   }
 
