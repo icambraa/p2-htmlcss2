@@ -33,7 +33,7 @@
     width: 100%;
 
     &:focus {
-      border-color: $color-accent-focus;
+      border-color: $color-accent-focus; //oklch(65% 0.14 150);
       box-shadow: 0 0 0 2px $color-bg-100, 0 0 0 4px $color-accent-focus;
     }
   }
@@ -50,7 +50,7 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: $color-accent-hover;
+      background-color: $color-accent-hover; //hwb(150 20% 10%);
     }
   }
 

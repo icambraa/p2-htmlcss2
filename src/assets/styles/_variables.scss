@@ -24,7 +24,8 @@ $color-bg-300: #c7b198;
 $color-naranja: #f8843c;
 
 $color-accent-focus: oklch(65% 0.14 150);
-$color-accent-hover: color-mix(in oklch, $color-accent-focus 80%, black 20%);
+$color-accent-hover: hwb(150 20% 10%);
+
 
 //colroes de bootstrap
 $primary: $color-primary-100;
