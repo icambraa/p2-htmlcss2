@@ -10,9 +10,6 @@ body {
   font-family: $font-family-sans-serif;
   background-color: $color-bg-100;
   color: $color-text-100;
-}
-
-body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;

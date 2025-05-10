@@ -1,4 +1,9 @@
+/* ================================================
+                   FORMULARIO
+================================================ */
+
 .libre {
+  /* ---------- CONTENEDOR DEL FORMULARIO ---------- */
   &__form {
     background-color: #fff;
     padding-block: 5dvh;
@@ -10,6 +15,7 @@
     container-type: inline-size;
   }
 
+  /* ---------- ETIQUETAS DEL FORMULARIO ---------- */
   &__form-label {
     font-weight: 600;
     color: $color-text-100;
@@ -17,6 +23,7 @@
     margin-bottom: 0.5rem;
   }
 
+  /* ---------- CAMPOS DE TEXTO ---------- */
   &__form-control {
     background-color: #fff;
     border: 1px solid $color-accent-200;
@@ -31,6 +38,7 @@
     }
   }
 
+  /* ---------- BOTÓN DE ENVÍO ---------- */
   &__btn {
     padding: 0.6rem 1.5rem;
     font-size: 1rem;
@@ -46,15 +54,18 @@
     }
   }
 
+  /* ---------- RESPONSIVE ---------- */
   @container (width > 480px) {
     &__form {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
     }
+
     &__campo:nth-child(3) {
       grid-column: 1 / -1;
     }
+
     &__btn {
       justify-self: start;
     }

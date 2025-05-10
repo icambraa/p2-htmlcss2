@@ -1,4 +1,9 @@
+/* ================================================
+                    PORTADA
+================================================ */
+
 .portada {
+  /* ---------- FONDO Y LAYOUT GENERAL ---------- */
   background: url("../images/portada.png") center/cover no-repeat;
   min-height: 100vh;
   display: grid;
@@ -7,9 +12,9 @@
   padding: 2rem;
   color: white;
 
+  /* ---------- BLOQUE PRINCIPAL HERO ---------- */
   &__hero {
     container-type: inline-size;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -23,6 +28,7 @@
     border-radius: 1rem;
   }
 
+  /* ---------- TÍTULO PRINCIPAL ---------- */
   &__titulo {
     grid-area: titulo;
     font-size: clamp(2rem, 6vw, 4rem);
@@ -33,11 +39,14 @@
     }
   }
 
+  /* ---------- LEMA ---------- */
   &__lema {
     grid-area: lema;
     font-size: 1.4rem;
     font-weight: 500;
   }
+
+  /* ---------- BLOQUE DE FECHA ---------- */
   &__fecha {
     grid-area: fecha;
     padding: 1.2rem 1.5rem;
@@ -48,6 +57,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
   }
+
   &__fecha-label {
     display: block;
     font-size: 0.85rem;
@@ -57,21 +67,26 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
+
   &__fecha-texto {
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0;
   }
+
   &__ver-maps {
     display: inline-block;
     margin-top: 0.5rem;
     font-size: 0.9rem;
     color: #ffb366;
     text-decoration: underline;
+
     &:hover {
       color: #ffd9b3;
     }
   }
+
+  /* ---------- BOTÓN DE CTA ---------- */
   &__btn {
     grid-area: boton;
     justify-self: end;
@@ -81,6 +96,7 @@
     border-radius: 0.5rem;
   }
 
+  /* ---------- RESPONSIVE ---------- */
   @container (width < 560px) {
     &__hero {
       grid-template-columns: 1fr;
@@ -93,6 +109,7 @@
       gap: 1rem;
       padding: 1.5rem;
     }
+
     &__btn {
       justify-self: start;
     }
@@ -103,15 +120,19 @@
       padding: 1.25rem;
       gap: 1rem;
     }
+
     &__titulo {
       font-size: 2rem;
     }
+
     &__lema {
       font-size: 1.2rem;
     }
+
     &__fecha {
       padding: 1rem 1.25rem;
     }
+
     &__btn {
       padding: 0.75rem 1rem;
       font-size: 0.9rem;
@@ -125,6 +146,7 @@
   }
 }
 
+/* ---------- @SUPPORTS ---------- */
 @supports not (display: grid) {
   .portada {
     display: block;

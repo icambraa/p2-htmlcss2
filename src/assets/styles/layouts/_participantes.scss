@@ -1,9 +1,15 @@
+/* ================================================
+                 PARTICIPANTES
+================================================ */
+
 .participantes {
+  /* ---------- TÍTULO PRINCIPAL ---------- */
   &__titulo {
     font-size: 2.5rem;
     font-weight: 700;
   }
 
+  /* ---------- CONTENEDOR FLEX DE TARJETAS ---------- */
   &__grid {
     display: flex;
     flex-wrap: wrap;
@@ -11,6 +17,7 @@
     gap: 1.5rem;
   }
 
+  /* ---------- TARJETA INDIVIDUAL ---------- */
   &__tarjeta {
     background-color: $color-bg-100;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -24,12 +31,14 @@
     }
   }
 
+  /* ---------- IMAGEN DEL PARTICIPANTE ---------- */
   &__imagen {
     object-fit: cover;
     height: 350px;
     object-position: center top;
   }
 
+  /* ---------- CONTENIDO DE LA TARJETA ---------- */
   &__contenido {
     padding: 1rem;
   }
@@ -37,10 +46,12 @@
   &__nombre {
     font-weight: 600;
   }
+
   &__descripcion {
     font-size: 0.95rem;
   }
 
+  /* ----------RESPONSIVE---------- */
   @container (width > 300px) {
     &__nombre {
       font-size: 1.1rem;

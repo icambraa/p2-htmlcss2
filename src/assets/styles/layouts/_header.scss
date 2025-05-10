@@ -1,6 +1,11 @@
+/* ================================================
+                     HEADER
+================================================ */
+
 .encabezado {
   font-weight: normal;
 
+  /* ---------- CONTENEDOR PRINCIPAL ---------- */
   &__contenedor {
     container-type: inline-size;
     display: flex;
@@ -10,10 +15,12 @@
     padding-inline: adjustmenu(1rem, 1.5);
   }
 
+  /* ---------- LOGO ---------- */
   &__logo-img {
     max-height: adjustmenu(20px, 2);
   }
 
+  /* ---------- NAVEGACIÓN ---------- */
   &__navegacion {
     display: flex;
     justify-content: center;
@@ -37,6 +44,7 @@
     }
   }
 
+  /* ---------- RESPONSIVE---------- */
   @container (width < 560px) {
     &__contenedor {
       flex-direction: column;
@@ -44,6 +52,7 @@
       text-align: center;
     }
   }
+
   @container (width < 420px) {
     &__lista {
       flex-direction: column;

@@ -1,6 +1,12 @@
+/* ================================================
+                      FOOTER
+================================================ */
+
+/* ---------- CONTENEDOR PRINCIPAL ---------- */
 .pie-de-pagina {
   font-weight: normal;
 
+  /* ---------- ZONA SUPERIOR ---------- */
   &__superior {
     background-color: $color-primary-100;
   }
@@ -14,19 +20,21 @@
     border-color: rgba(255, 255, 255, 0.2);
   }
 
+  /* ---------- ZONA INFERIOR ---------- */
   &__inferior {
     container-type: inline-size;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
   }
 
+  /* ---------- LOGO ---------- */
   &__logo-img {
     max-height: 40px;
   }
 
+  /* ---------- NAVEGACIÓN ---------- */
   &__navegacion {
     display: flex;
     gap: 1rem;
@@ -46,6 +54,7 @@
     }
   }
 
+  /* ---------- REDES SOCIALES ---------- */
   &__redes-sociales {
     display: flex;
     gap: 1rem;
@@ -59,6 +68,7 @@
     }
   }
 
+  /* ---------- RESPONSIVE ---------- */
   @container (width >= 680px) {
     &__inferior {
       flex-direction: row;

@@ -1,9 +1,16 @@
+/* ================================================
+                    ARTÍCULO
+================================================ */
+
+/* ---------- CONTENEDOR PRINCIPAL ---------- */
 .articulo {
   &__contenedor {
     max-width: 900px;
     margin: 0 auto;
     container-type: inline-size;
   }
+
+  /* ---------- ENCABEZADOS ---------- */
   &__titulo {
     font-size: 2.5rem;
     font-weight: 700;
@@ -21,6 +28,7 @@
     margin-bottom: 1rem;
   }
 
+  /* ---------- CUERPO DE TEXTO ---------- */
   &__texto {
     font-size: 1.05rem;
     line-height: 1.7;
@@ -28,15 +36,19 @@
     margin-bottom: 1.2rem;
   }
 
+  /* ---------- INTRO CON IMAGEN ---------- */
   &__intro {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
+
   &__imagen {
     flex-shrink: 0;
     height: 100%;
   }
+
+  /* ---------- CITA DESTACADA ---------- */
   &__cita {
     padding: 1rem 1.5rem;
     background: $color-bg-200;
@@ -45,18 +57,22 @@
     margin: 2rem 0;
   }
 
+  /* ---------- LISTA DE ELEMENTOS ---------- */
   &__lista {
     background: $color-bg-200;
     padding: 1.5rem;
     border-radius: 0.5rem;
     list-style: none;
+    margin-top: 1.5rem;
+    justify-content: center;
   }
+
   &__lista-item {
     position: relative;
     padding-left: 1.8rem;
-    margin-bottom: 0.75rem;
     color: $color-text-100;
     font-weight: 500;
+
     &::before {
       content: "✔";
       color: $primary;
@@ -65,32 +81,44 @@
     }
   }
 
+  /* ---------- FIGURAS E IMÁGENES ---------- */
   &__figura {
     text-align: center;
   }
+
   &__figura-texto {
     font-size: 0.9rem;
     color: $color-text-200;
   }
 
+  /* ---------- ESPACIADOS COMUNES ---------- */
   :where(h1, h2, p, li):not(:last-child) {
     margin-bottom: 1rem;
   }
-  ul:has(li:hover) {
-    background: lighten($color-bg-300, 5%);
+
+  &__intro:has(img) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 1rem;
   }
 
+  :is(.articulo__titulo, .articulo__subtitulo) {
+    line-height: 1.2;
+  }
+
+  /* ---------- QUERIES DE CONTENEDOR ---------- */
   @container (width > 640px) {
     .articulo__intro {
       flex-direction: row;
       align-items: flex-start;
       gap: 2rem;
     }
+
     .articulo__imagen {
       flex: 0 0 40%;
       max-width: 40%;
       margin-bottom: 0;
     }
+
     .articulo__texto {
       flex: 1;
       margin-bottom: 0;
