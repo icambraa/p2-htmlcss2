@@ -3,6 +3,13 @@
 ================================================ */
 
 .libre {
+
+  /* ---------- TÍTULO ---------- */
+  &__titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
   /* ---------- CONTENEDOR DEL FORMULARIO ---------- */
   &__form {
     background-color: #fff;
